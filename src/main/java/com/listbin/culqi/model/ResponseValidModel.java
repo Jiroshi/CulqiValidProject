@@ -2,14 +2,15 @@ package com.listbin.culqi.model;
 
 public class ResponseValidModel {
 
-    String Valid;
+    String valid;
 
-    public String getValid() {
-        return Valid;
-    }
+	public String getValid() {
+		return valid;
+	}
 
-    public ResponseValidModel setValid(String valid) {
-        Valid = valid;
-        return this;
-    }
+	public void setValid(String valid) {
+		this.valid = valid;
+	}
+
+
 }

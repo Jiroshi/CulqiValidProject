@@ -1,5 +1,6 @@
 package com.listbin.culqi.service.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import com.listbin.culqi.model.*;
@@ -33,17 +34,23 @@ public class ListBinValidServiceImpl implements ListBinValidService {
 		return responseValidModel;
 	}
 
-	public Boolean validarRespuesta(){
+	public Boolean validarRespuesta(String cadena){
 
-		return true;
+		ArrayList<String> arrayList = new ArrayList<>();
+		arrayList.add("key1");
+		arrayList.add("key3");
+		arrayList.add("key5");
+		arrayList.add("key7");
+		arrayList.add("key9");
+		
+		Boolean flag = false;
+		for (String array: arrayList) {
+			if (array.equals(cadena)){
+				flag = true;
+			}
+		}
+
+		return flag;
 	}
-
-	public String callingValidService(){
-
-		RestTemplate restTemplate = new RestTemplate();
-		String value = restTemplate.getForObject(Constants.END_POINT_VALIDATE, String.class);
-
-		return value;
-	};
 
 }

@@ -5,9 +5,7 @@ import com.listbin.culqi.model.ResponseValidModel;
 
 public interface ListBinValidService {
 
-	String callingValidService();
-
 	ResponseValidModel getBrandValidResponse(InputValidMOdel inputModel);
 
-	Boolean validarRespuesta();
+	Boolean validarRespuesta(String cadena);
 }
